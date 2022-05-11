@@ -1,0 +1,98 @@
+/* 专门的颜色样式表 */
+
+body {
+  color: #fb5;
+  background-color: #334;
+}
+/* 链接伪类选择器 */
+/* a:link - 正常，未访问过的链接 */
+/* a:visited - 用户已访问过的链接 */
+/* a:hover - 当用户鼠标放在链接上时 */
+/* a:active - 链接被点击的那一刻 */
+a:link {
+  color: #445;
+  background-color: #eb6;
+}
+a:visited {
+  color: #345;
+  background-color: #eb6;
+}
+a:hover {
+  color: #667;
+  background-color: #fb5;
+}
+a:active {
+  color: #778;
+  background-color: #ec8;
+}
+
+header {
+  color: #ec8;
+  background-color: #334;
+  border-color: #667;
+}
+header nav {
+  color: #455;
+  background-color: #789;
+  border-color: #667;
+}
+header nav ul {
+  border-color: #99a;
+}
+header nav a:link,
+header nav a:visited {
+  color: #eef;
+  background-color: transparent;
+  border-color: #99a;
+}
+header nav a:hover {
+  color: #445;
+  background-color: #eb6;
+}
+header nav a:active {
+  color: #667;
+  background-color: #ec8;
+}
+
+article {
+  color: #223;
+  background-color: #edc;
+  border-color: #667;
+}
+article img {
+  /* 1.border占用空间，outline不占用空间，不会影响元素的尺寸和位置。 */
+  /* 2.border 可应用于几乎所有有形的html元素，而 outline 是针对链接、表单控件和ImageMap等元素设计。outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失。这些都是浏览器的默认行为，无需JavaScript配合CSS来控制。 */
+  border-color: #ba9;
+  outline-color: #dcb;
+}
+#imagegallery a {
+  background-color: transparent;
+}
+
+/* * index */
+/* 为here类定义的样式 */
+header nav a.here:link,
+header nav a.here:visited,
+header nav a.here:hover,
+header nav a.here:active {
+  color: #eef;
+  background-color: #799;
+}
+
+/* * live 页面 */
+th {
+  color: #edc;
+  background-color: #455;
+}
+tr td {
+  color: #223;
+  background-color: #eb6;
+}
+tr.odd td {
+  color: #223;
+  background-color: #ec8;
+}
+tr.highlightrow td {
+  color: #223;
+  background-color: #cba;
+}
