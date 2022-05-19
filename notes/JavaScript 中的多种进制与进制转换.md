@@ -1,4 +1,4 @@
-# code note of everywhere
+# JavaScript
 
 ---
 
@@ -97,3 +97,5 @@ Number('0x88kk'); // NaN
 ```
 
 ---
+
+2022.05.17
