@@ -30,6 +30,7 @@ function minSum(n, res, index) {
       }
     }
   } else {
+    //   最后一行
     let min = Infinity;
     for (let i = 0; i < 3; i++) {
       if (i != index && res[0][i] < min) {
