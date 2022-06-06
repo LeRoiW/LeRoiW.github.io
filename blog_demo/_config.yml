@@ -5,9 +5,9 @@ header-img: img/post-bg-desk.jpg
 email: 暂无
 description: '写一句你想写的话'
 keyword: '我的博客'
-url: 'http://LeRoiW.github.io/blog_demo' # your host, for absolute URL
+url: 'http://LeRoiW.github.io/bolg_demo' # your host, for absolute URL
 baseurl: '' # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: 'https://github.com/LeRoiW/LeRoiW.github.io.git/blog_demo' # you code repository
+github_repo: 'https://LeRoiW.com/LeRoiW/LeRoiW.github.io.git/bolg_demo' # you code repository
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
