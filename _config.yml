@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # About Theme
@@ -191,3 +192,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+=======
+theme: jekyll-theme-cayman
+>>>>>>> 2685e1b4b1df8a6495fff40645c3d390e845a5b3
