@@ -5,7 +5,21 @@
 <script src="/assets/js/geopattern.min.js"></script>
 <script>
   function setRandomBgImage(selector, seed) {
-    var pattern = GeoPattern.generate(seed);
+    let finalSeed = "";
+
+    if (seed) {
+      finalSeed = seed;
+    } else {
+      const STRING_POOL =
+        "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      let times = 5;
+      while (times--) {
+        const index = Math.floor(Math.random() * 62);
+        finalSeed += STRING_POOL[index];
+      }
+    }
+
+    var pattern = GeoPattern.generate(finalSeed);
     var element = document.querySelector(selector);
     if (element) {
       element.style.backgroundImage = pattern.toDataUrl();

@@ -137,8 +137,9 @@ html {
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 24px;
+      font-weight: 400;
       &:hover {
-        text-decoration: underline;
+        color: #5f9ea0 !important;
       }
     }
   }
@@ -328,8 +329,8 @@ html {
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
-    padding: 2px 4px;
-    border-radius: 2px;
+    padding: 2px 7px;
+    border-radius: 13px;
     transition: color 0.2s;
     margin-bottom: 8px;
 

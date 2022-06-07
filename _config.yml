@@ -108,7 +108,7 @@ translate_langs:
 # theme_color: snowwhite
 #
 # Custom color as below:
-# theme_color: "#882250"
+# theme_color: "#5f9ea0"
 
 # You can choose a brand color
 # Default brand colors as below:
@@ -119,7 +119,7 @@ translate_langs:
 # brand_color: orangered
 #
 # Custom color as below:
-# brand_color: "#1a8e42"
+brand_color: "#5f9ea0"
 
 # Night/Dark mode
 # Default mode is "auto", "auto" is for auto nightshift
@@ -149,13 +149,13 @@ header_pages:
   - archives.html
   - categories.html
   - tags.html
-  - about.md
+  - about.html
 
 # Page default value
 defaults:
   home:
     heading: "Le Roi's Blog"
-    subheading: "愿所有念念不忘，终究会有回响"
+    subheading: "——愿所有念念不忘，最终都能会所有回响"
     banner: "Your image url"
 
 # Banner default settings
