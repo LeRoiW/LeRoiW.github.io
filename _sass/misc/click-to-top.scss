@@ -4,16 +4,17 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   right: 60px;
   bottom: 48px;
-  background: white;
+  background: $brand-color;
+  color: #FFF;
   cursor: pointer;
   opacity: 0;
   transform: translateY(10px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.33);
   font-size: 24px;
   user-select: none;
 
@@ -41,6 +42,6 @@
 
 html[data-theme="dark"] {
   .click-to-top {
-    background: #34323D;
+    background: $brand-color;
   }
 }

@@ -194,7 +194,7 @@ html {
   @include relative-font-size(1.0);
   color: $footer-text-color;
   background-color: $footer-background-color;
-  text-align: left;
+  text-align: center;
   transition: background-color 0.2s;
 
   .site-footer-inner {

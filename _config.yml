@@ -40,14 +40,14 @@ author: LeRoiW
 #   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
 #   "Copyright © 2017-2021 Foobar"
 #
-copyright: "Copyright (cleft) 2017-{currentYear} {author}"
+copyright: "Copyright (c) 2017-{currentYear} <a href='https://github.com/LeRoiW/'>@{author}</a> All Rights Reserved"
 
 description: >- # this means to ignore newlines until "baseurl:"
   Le Roi 杂七杂八的杂物间
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-favicon: "" # the favicon for your site
+url: "https://github.com/LeRoiW/" # the base hostname & protocol for your site, e.g. https://example.com
+favicon: "assets/favicon.png" # the favicon for your site
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -58,10 +58,10 @@ yat:
 # debug: false
 
 # If you don't want transparent header, you can set false
-# header_transparent: true
+header_transparent: true
 
 # If you want to change the content width, you can set to another value
-# content_width: "920px"
+content_width: "1020px"
 
 # Google analytics
 # google_analytics: [Tracking ID]
@@ -155,7 +155,7 @@ header_pages:
 defaults:
   home:
     heading: "Le Roi's Blog"
-    subheading: "——愿所有念念不忘，最终都能会所有回响"
+    subheading: "——愿所有念念不忘，最终都能有所回响"
     banner: "Your image url"
 
 # Banner default settings
@@ -178,7 +178,7 @@ defaults:
 # excerpt_size: 350
 
 # Pagination setting
-# paginate: 5
+paginate: 10
 
 # Disqus comments
 # disqus:
