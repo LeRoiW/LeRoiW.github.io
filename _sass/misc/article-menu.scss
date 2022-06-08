@@ -15,6 +15,9 @@
   }
 
   .post-menu-content {
+      max-height: 620px;
+      overflow-y: auto;
+
     ul {
       border-left: 1px solid #e9ecef;
       $indent: $base-font-size / 4;
@@ -58,5 +61,8 @@
         }
       }
     }
+  }
+  .post-menu-content::-webkit-scrollbar {
+      width: 0;
   }
 }

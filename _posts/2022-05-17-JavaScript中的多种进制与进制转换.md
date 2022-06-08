@@ -2,7 +2,7 @@
 layout: post
 title: JavaScript 中的多种进制与进制转换
 categories: JavaScript
-tags: [进制, JavaScript]
+tags: 进制
 ---
 
 ## 一、进制介绍

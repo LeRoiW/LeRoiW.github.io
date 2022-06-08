@@ -123,9 +123,17 @@
           lastActive.classList.remove("active");
         }
         doMenuCollapse(activeIndex);
+
+        // 目录列表跟随文章滚动
+        if (a.offsetTop > 600) {
+          menuContent.scrollTop = a.offsetTop - 550;
+        } else {
+          menuContent.scrollTop = 0;
+        }
       }
       event.preventDefault();
     });
   }
   generateContent();
 </script>
+

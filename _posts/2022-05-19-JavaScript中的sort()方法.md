@@ -3,7 +3,7 @@ layout: post
 title: JavaScript 中的 sort()方法
 subtitle: 对sort()方法的进一步理解
 categories: JavaScript
-tags: [sort, JavaScript]
+tags: sort
 ---
 
 ## 一、介绍
