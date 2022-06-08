@@ -175,7 +175,7 @@ defaults:
 #   subheading_style: null  # Custom subheading style (e.g. color: gold)
 
 # Excerpt size setting
-# excerpt_size: 350
+excerpt_size: 150
 
 # Pagination setting
 paginate: 10
