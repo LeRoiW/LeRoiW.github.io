@@ -1,9 +1,8 @@
 ---
 layout: post
 title: JavaScript 中的多种进制与进制转换
-author: Le Roi
 categories: JavaScript
-tags: 进制转换 字符串
+tags: 进制
 ---
 
 ## 一、进制介绍
