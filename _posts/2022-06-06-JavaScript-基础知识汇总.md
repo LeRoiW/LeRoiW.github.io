@@ -24,7 +24,7 @@ tags: JavaScript
 
 #### 1.2 JavaScript 的组成
 
-![JS 的组成](images\220606_JavaScript_img/Part1/figure1-1.png)
+![JS 的组成](/assets/images/220606_JavaScript_img/Part1/figure1-1.png)
 
 1. ECMAScript
    - 由 ECMA 国际（ 原欧洲计算机制造商协会）进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，但实际上后两者是 ECMAScript 语言的实现和扩展。
@@ -41,7 +41,7 @@ tags: JavaScript
 1. 行内式  
    `<input type="button" value="点我试试" onclick="alert('Hello World')" />`
 2. HTML 内嵌  
-   `<script>alert('Hello World~!');</script>`
+   `<script> alert('Hello World~!'); </script>`
 3. 外部 JS 文件  
    `<script src="my.js"></script>`
 
@@ -95,7 +95,7 @@ tags: JavaScript
    - NaN -> Not a number，代表一个非数值
 3. isNaN()
    - 用来判断一个变量是否为非数字的类型，返回 true 或者 false
-     ![isNaN](images\220606_JavaScript_img/Part1/figure3-1.png)
+     ![isNaN](/assets/images/220606_JavaScript_img/Part1/figure3-1.png)
 
 ##### 3.2.2 String
 
@@ -369,8 +369,8 @@ for (var i = 0; i < arr.length - 1; i++) {
 console.log(arr);
 ```
 
-![冒泡排序](images\220606_JavaScript_img/Part1/figure6-1.png)
-![冒泡排序](images\220606_JavaScript_img/Part1/figure6-2.gif)
+![冒泡排序](/assets/images/220606_JavaScript_img/Part1/figure6-1.png)
+![冒泡排序](/assets/images/220606_JavaScript_img/Part1/figure6-2.gif)
 
 ### 七、函数
 
@@ -748,9 +748,9 @@ Math.max() / Math.min(); // 求最大和最小值
      - 存储复杂类型(对象)，一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收。
      - **复杂数据类型存放到堆里面**
 
-   ![figure12-1](images\220606_JavaScript_img/Part1/figure12-1.png)
+   ![figure12-1](/assets/images/220606_JavaScript_img/Part1/figure12-1.png)
 
-   ![figure12-2](images\220606_JavaScript_img/Part1/figure12-2.jpg)
+   ![figure12-2](/assets/images/220606_JavaScript_img/Part1/figure12-2.jpg)
 
 ---
 
@@ -763,7 +763,7 @@ Math.max() / Math.min(); // 求最大和最小值
 
 &emsp;DOM(Document Object Model, 文档对象模型)
 
-![DOM树](images\220606_JavaScript_img/Part2/figure1-1.png)
+![DOM树](/assets/images/220606_JavaScript_img/Part2/figure1-1.png)
 
 - 文档：一个页面就是一个文档，DOM 中使用 document 表示
 - 元素：页面中的所有标签都是元素，DOM 中使用 element 表示
@@ -774,21 +774,39 @@ Math.max() / Math.min(); // 求最大和最小值
 #### 1.1 获取页面元素
 
 1. 根据 ID 获取
-   - `document.getElementByID('id');`
-   - 传入值`id`为大小写敏感的**字符串**
-   - 返回一个匹配特定 ID 的 DOM Element 对象，没有则返回 null
+
+   ```javascript
+   document.getElementByID("id");
+   // 传入值`id`为大小写敏感的**字符串**
+   // 返回一个匹配特定 ID 的 DOM Element 对象，没有则返回 null
+   ```
+
 2. 根据标签名获取
-   - `document.getElementsByTagName('标签名');`
-   - 返回带有指定标签名的对象的集合，以伪数组的形式进行存储
-   - 可以采取遍历的方法截取内部的元素对象
+
+   ```javascript
+   document.getElementsByTagName("标签名");
+   // 返回带有指定标签名的对象的集合，以伪数组的形式进行存储
+   // 可以采取遍历的方法截取内部的元素对象
+   ```
+
 3. HTML5 新增的方法
-   - `document.getElementsByClassName(‘类名’)；// 根据类名返回元素对象集合`
-   - `document.querySelector('选择器'); // 根据指定选择器返回第一个元素对象`
-   - `document.querySelectorAll('选择器'); // 根据指定选择器返回`
-   - 其中，选择器的方式需要在传入选择器的时候需要加符号(eg. '#id' '.class')
-4. 获取 body&HTML 元素
-   - `var bodyEle = document.body;`
-   - `var htmlEle = document.documentElement;`
+
+   ```javascript
+   document.getElementsByClassName (‘类名’)；
+   // 根据类名返回元素对象集合
+   document.querySelector('选择器');
+   // 根据指定选择器返回第一个元素对象
+   document.querySelectorAll('选择器');
+   // 根据指定选择器返回
+   // 其中，选择器的方式需要在传入选择器的时候需要加符号(eg. '#id' '.class')
+   ```
+
+4. 获取 body&HTML
+
+   ```javascript
+   var bodyEle = document.body;
+   var htmlEle = document.documentElement;
+   ```
 
 ### 二、事件基础
 
@@ -830,7 +848,7 @@ Math.max() / Math.min(); // 求最大和最小值
    - class 因为是个保留字，因此使用 className 来操作元素类名属性
    - className 会直接更改元素的类名，会覆盖原先的类名。
 
-![操作元素](images\220606_JavaScript_img/Part2/figure3-1.png)
+![操作元素](/assets/images/220606_JavaScript_img/Part2/figure3-1.png)
 
 #### 3.2 节点操作
 
@@ -843,53 +861,80 @@ Math.max() / Math.min(); // 求最大和最小值
 ##### 3.2.1 节点层级
 
 1. 父级节点
-   - `node.parentNode`
-   - 返回**最近的一个父节点**
-   - 没有指定的父节点则返回 null
+
+   ```javascript
+   node.parentNode;
+   // 返回最近的一个父节点
+   // 没有指定的父节点则返回 null
+   ```
+
 2. 子节点
-   - `parentNode.childNodes（标准）`
-     - 返回包含指定节点的**所有子节点**的集合，该集合为即时更新的集合
-     - 返回值里面包含元素节点，文本节点等。如果只想要获得元素节点，则需要专门处理
-   - ▲ `parentNode.children（非标准）`
-     - 只读属性，返回**所有的子元素节点**。它只返回子元素节点，其余节点不返回
-   - `parentNode.firstChild`
-     - 返回第一个子节点，找不到则返回 null。包含所有的节点
-   - `parentNode.lastChild`
-     - 返回最后一个子节点，找不到则返回 null。包含所有的节点
-   - `parentNode.firstElementChild`
-     - 返回第一个子元素节点，找不到则返回 null(>=IE9)
-   - `parentNode.lastElementChild`
-     - 返回最后一个子元素节点，找不到则返回 null(>=IE9)
-   - 如果想要第一个子元素节点，可以使用 `parentNode.chilren[0]`
-   - 如果想要最后一个子元素节点，可以使用 `parentNode.chilren[parentNode.chilren.length - 1]`
+
+   ```javascript
+   parentNode.childNodes;
+   // （标准）返回包含指定节点的所有子节点的集合，该集合为即时更新的集合
+   // 返回值里面包含元素节点，文本节点等。如果只想要获得元素节点，则需要专门处理
+   parentNode.children;
+   // （非标准）只读属性，返回所有的子元素节点。它只返回子元素节点，其余节点不返回
+   parentNode.firstChild;
+   // 返回第一个子节点，找不到则返回 null。包含所有的节点
+   parentNode.lastChild;
+   // 返回最后一个子节点，找不到则返回 null。包含所有的节点
+   parentNode.firstElementChild;
+   // 返回第一个子元素节点，找不到则返回 null(>=IE9)
+   parentNode.lastElementChild;
+   // 返回最后一个子元素节点，找不到则返回 null(>=IE9)
+   parentNode.chilren[0]; // 第一个子元素节点
+   parentNode.chilren[parentNode.chilren.length - 1]; // 最后一个子元素节点
+   ```
+
 3. 兄弟节点
-   - `node.nextSibling`
-     - 返回当前元素的下一个兄弟节点，找不到则返回 null。包含所有的节点
-   - `node.previousSibling`
-     - 返回当前元素上一个兄弟节点，找不到则返回 null。包含所有的节点
-   - `node.nextElementSibling`
-     - 返回当前元素下一个兄弟元素节点，找不到则返回 null(>=IE9)
-   - `node.previousElementSibling`
-     - 返回当前元素上一个兄弟元素节点，找不到则返回 null(>=IE9)
+
+   ```javascript
+   node.nextSibling;
+   // 返回当前元素的下一个兄弟节点，找不到则返回 null。包含所有的节点
+   node.previousSibling;
+   // 返回当前元素上一个兄弟节点，找不到则返回 null。包含所有的节点
+   node.nextElementSibling;
+   // 返回当前元素下一个兄弟元素节点，找不到则返回 null(>=IE9)
+   node.previousElementSibling;
+   // 返回当前元素上一个兄弟元素节点，找不到则返回 null(>=IE9)
+   ```
 
 ##### 3.2.2 节点操作
 
 1. 创建节点(动态创建元素节点)
-   - `document.createElement('tagName')`
-   - 这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点
+
+   ```javascript
+   document.createElement("tagName");
+   // 这些元素原先不存在，是根据需求动态生成的，所以也称为动态创建元素节点
+   ```
+
 2. 添加节点
-   - node.appendChild(child)
-     - 将一个节点添加到指定父节点的子节点列表末尾。类似于 CSS 里面的 after 伪元素
-   - node.insertBefore(child, 指定元素)
-     - 将一个节点添加到父节点的指定子节点前面。类似于 CSS 里面的 before 伪元素
+
+   ```javascript
+   node.appendChild(child);
+   // 将一个节点添加到指定父节点的子节点列表末尾。类似于 CSS 里面的 after 伪元素
+   node.insertBefore(child, 指定元素);
+   // 将一个节点添加到父节点的指定子节点前面。类似于 CSS 里面的 before 伪元素
+   ```
+
 3. 删除节点
-   - node.removeChild(child)
-   - 从 DOM 中删除一个子节点，返回删除的节点
+
+   ```javascript
+   node.removeChild(child);
+   // 从 DOM 中删除一个子节点，返回删除的节点
+   ```
+
 4. 复制节点
-   - node.cloneNode()
-   - 返回调用该方法的节点的一个副本。也称为克隆节点/拷贝节点
-   - 如果括号参数为空或者为 false ，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点
-   - 如果括号参数为 true ，则是深度拷贝，会复制节点本身以及里面所有的子节点。
+
+   ```javascript
+   node.cloneNode();
+   // 返回调用该方法的节点的一个副本。也称为克隆节点/拷贝节点
+   // 如果括号参数为空或者为 false ，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点
+   // 如果括号参数为 true ，则是深度拷贝，会复制节点本身以及里面所有的子节点。
+   ```
+
 5. 三种动态创建元素的区别
    - `document.write` 是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘，**不推荐使用**
    - `innerHTML` 是将内容写入某个 DOM 节点，不会导致页面全部重绘
@@ -933,7 +978,7 @@ Math.max() / Math.min(); // 求最大和最小值
 
 1. 传统注册方式
    - 利用 on 开头的事件(eg. `onclick`)
-   - `<button onclick=“alert('hi~')”></button>` 或 `btn.onclick = function() {}`
+   - `<button onclick=“alert('hi~')”> </button>` 或 `btn.onclick = function() {}`
    - 特点：注册事件的**唯一性** => 同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会**覆盖**前面注册的处理函数
 2. 方法监听方式
    - W3C 标准 推荐方式
@@ -944,32 +989,41 @@ Math.max() / Math.min(); // 求最大和最小值
 &emsp;以上为两类绑定的方式，在实际中经常使用以下具体方法
 
 - `addEventListener` 事件监听方式
-  - `eventTarget.addEventListener(type,listener[ ,useCapture])`
-  - 将指定的监听器注册到 eventTarget（目标对象）上，当该对象触发指定的事件时，就会执行事件处理函数
-  - type：事件类型**字符串**，比如 click 、mouseover ，注意这里**不带 on**
-  - listener：事件处理函数，事件发生时，会调用该监听函数
-  - useCapture：可选参数，是一个布尔值，默认是 false
+
+  ```javascript
+  eventTarget.addEventListener (type, listener[ ,useCapture])
+  // 将指定的监听器注册到 eventTarget（目标对象）上，当该对象触发指定的事件时，就会执行事件处理函数
+  // type：事件类型字符串，比如 click 、mouseover ，注意这里不带 on
+  // listener：事件处理函数，事件发生时，会调用该监听函数
+  // useCapture：可选参数，是一个布尔值，默认是 false
+  ```
+
 - `attachEvent` 事件监听方式
-  - `eventTarget.attachEvent(eventNameWithOn, callback)`
-  - 将指定的监听器注册到 eventTarget（目标对象） 上，当该对象触发指定的事件时，指定的回调函数就会被执行
-  - eventNameWithOn：事件类型**字符串**，比如 onclick 、onmouseover ，这里**要带 on**
-  - callback： 事件处理函数，当目标触发事件时回调函数被调用
+
+  ```javascript
+  eventTarget.attachEvent(eventNameWithOn, callback);
+  // 将指定的监听器注册到 eventTarget（目标对象） 上，当该对象触发指定的事件时，指定的回调函数就会被执行
+  // eventNameWithOn：事件类型字符串，比如onclick、onmouseover，这里要带on
+  // callback:事件处理函数，当目标触发事件时回调函数被调用
+  ```
 
 #### 4.2 删除事件(解绑)
 
-1. 传统注册方式
-   - `eventTarget.onclick = null;`
-2. 方法监听注册方式
-   - `eventTarget.removeEventListener(type, listener[, useCapture]);`
-   - `eventTarget.detachEvent(eventNameWithOn, callback);`
+```javascript
+ // 传统注册方式
+eventTarget.onclick = null;
+// 方法监听注册方式
+eventTarget.removeEventListener (type, listener[, useCapture]);
+eventTarget.detachEvent (eventNameWithOn, callback);
+```
 
 #### 4.3 DOM 事件流
 
 &emsp;DOM 事件流描述的是从页面中接收事件的**顺序**。事件发生时会在元素节点之间**按照特定的顺序传播**，这个传播过程即 DOM 事件流  
 &emsp;DOM 事件流分为 3 个阶段：捕获阶段 -> 当前目标阶段 -> 冒泡阶段
 
-![DOM事件流](images\220606_JavaScript_img/Part2/figure4-1.png)
-![DOM事件流](images\220606_JavaScript_img/Part2/figure4-2.png)
+![DOM事件流](/assets/images/220606_JavaScript_img/Part2/figure4-1.png)
+![DOM事件流](/assets/images/220606_JavaScript_img/Part2/figure4-2.png)
 
 - 事件捕获(body -> div)：网景最早提出，由 DOM 最顶层节点开始，然后逐级向下传播到到最具体的元素接收的过程。
 - 事件冒泡(div -> body)：IE 最早提出，事件开始时由最具体的元素接收，然后逐级向上传播到到 DOM 最顶层节点的过程。
@@ -1105,7 +1159,7 @@ eventTarget.addEventListener("click", function (event) {});
 &emsp;BOM(Browser Object Model，浏览器对象模型)  
 &emsp;提供了独立于内容而与浏览器窗口进行交互的对象，核心对象是 Window；它比 DOM 更大，包含了 DOM
 
-![BOM结构](images\220606_JavaScript_img/Part2/figure5-1.png)
+![BOM结构](/assets/images/220606_JavaScript_img/Part2/figure5-1.png)
 
 | DOM                                      | BOM                                              |
 | :--------------------------------------- | :----------------------------------------------- |
@@ -1124,17 +1178,17 @@ eventTarget.addEventListener("click", function (event) {});
 
 1. 窗口加载事件
 
-   - `window.onload` 是一个事件，在文档加载完成后能立即触发，并且能够为该事件注册事件处理函数。将要对对象或者模块进行操作的代码存放在处理函数中。即：window.onload =function (){这里写操作的代码};
+   - `window.onload` 是一个事件，在文档加载完成后能立即触发，并且能够为该事件注册事件处理函数。将要对对象或者模块进行操作的代码存放在处理函数中。
 
    ```javascript
    window.onload = function () {};
    // 或者
-   window.addEventListener("load", function () {});
+   window.addEventListener("DOMContentLoaded", function () {});
    ```
 
    - 有了 `window.onload` 就可以把 JS 代码写到页面元素的上方，因为 onload 是等页面内容全部加载完毕，再去执行处理函数。
    - `window.onload` 传统注册事件方式 只能写一次，如果有多个，会以最后一个 `window.onload` 为准。
-   - `document.addEventListener('DOMContentLoaded',function(){})` 当纯 HTML 被完全加载以及解析时，DOMContentLoaded 事件会被触发，而不必等待样式表，图片或者子框架完成加载。
+   - `window.addEventListener` 当纯 HTML 被完全加载以及解析时，DOMContentLoaded 事件会被触发，而不必等待样式表，图片或者子框架完成加载。
 
 2. 调整窗口大小事件
 
@@ -1149,22 +1203,38 @@ eventTarget.addEventListener("click", function (event) {});
 #### 5.3 定时器
 
 1. setTimeout() 定时器
-   - `window.setTimeout(调用函数, [延迟的毫秒数]);`
-   - 用于设置一个定时器，该定时器在**定时器到期后执行调用函数**。
-   - 这个调用函数可以直接写函数，或者写函数名或者采取字符串‘函数名()'三种形式。第三种不推荐
-   - 延迟的毫秒数省略默认是 0，如果写，**必须是毫秒**
+
+   ```javascript
+   window.setTimeout(调用函数, [延迟的毫秒数]);
+   // 用于设置一个定时器，该定时器在定时器到期后执行调用函数。
+   // 这个调用函数可以直接写函数，或者写函数名或者采取字符串‘函数名()'三种形式。第三种不推荐
+   // 延迟的毫秒数省略默认是 0，如果写，必须是毫秒
+   ```
+
 2. 停止 setTimeout() 定时器
-   - `window.clearTimeout(timeoutID)`
-   - **参数为定时器的标识符**
+
+   ```javascript
+   window.clearTimeout(timeoutID);
+   // 参数为定时器的标识符
+   ```
+
 3. setInterval() 定时器
-   - `window.setInterval(回调函数, [间隔的毫秒数]);`
-   - **重复调用**一个函数，每隔这个时间，就去调用一次回调函数。
-   - 这个调用函数可以直接写函数，或者写函数名或者采取字符串 '函数名()' 三种形式。
-   - 间隔的毫秒数省略默认是 0，如果写，**必须是毫秒**，表示每隔多少毫秒就自动调用这个函数。
-   - **第一次执行也是间隔毫秒数之后执行，之后每隔毫秒数就执行一次。**
+
+   ```javascript
+   window.setInterval(回调函数, [间隔的毫秒数]);
+   // 重复调用一个函数，每隔这个时间，就去调用一次回调函数
+   // 这个调用函数可以直接写函数，或者写函数名或者采取字符串 '函数名()' 三种形式
+   // 间隔的毫秒数省略默认是 0，如果写，必须是毫秒，表示每隔多少毫秒就自动调用这个函数
+   // 第一次执行也是间隔毫秒数之后执行，之后每隔毫秒数就执行一次
+   ```
+
 4. 停止 setInterval() 定时器
-   - `window.clearInterval(intervalID);`
-   - **参数为定时器的标识符**
+
+   ```javascript
+   window.clearInterval(intervalID);
+   // 参数为定时器的标识符
+   ```
+
 5. 定时器的 name 设置为全局变量并初始化为 Null => 便于其他函数访问
 
 ### 六、JS 执行机制
@@ -1175,8 +1245,8 @@ eventTarget.addEventListener("click", function (event) {});
 
 > 同步和异步关注的是消息通信机制 (synchronous communication/ asynchronous communication)。同步，就是调用某个东西时，调用方得等待这个调用返回结果才能继续往后执行。异步，和同步相反，调用方不会等待得到结果，而是在调用发出后调用者可以继续执行后续操作，被调用者通过状体来通知调用者，或者通过回调函数来处理这个调用
 
-![同步](images\220606_JavaScript_img/Part2/figure6-1.png)
-![异步](images\220606_JavaScript_img/Part2/figure6-2.png)
+![同步](/assets/images/220606_JavaScript_img/Part2/figure6-1.png)
+![异步](/assets/images/220606_JavaScript_img/Part2/figure6-2.png)
 
 1. 同步任务
    - 同步任务都在主线程上执行，形成一个**执行栈**。
@@ -1194,8 +1264,8 @@ eventTarget.addEventListener("click", function (event) {});
 2. 异步任务（回调函数）放入任务队列中。
 3. 一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行。
 
-![执行机制](images\220606_JavaScript_img/Part2/figure6-3.png)
-![事件循环](images\220606_JavaScript_img/Part2/figure6-4.png)
+![执行机制](/assets/images/220606_JavaScript_img/Part2/figure6-3.png)
+![事件循环](/assets/images/220606_JavaScript_img/Part2/figure6-4.png)
 
 &emsp;由于主线程不断的重复获得任务、执行任务、再获取任务、再执行，所以这种机制被称为事件循环（ event loop）。
 
@@ -1240,7 +1310,7 @@ eventTarget.addEventListener("click", function (event) {});
 - 获得元素自身的大小（宽度高度）
 - 返回的数值都不带单位
 
-![offset](images\220606_JavaScript_img/Part2/figure8-1.png)
+![offset](/assets/images/220606_JavaScript_img/Part2/figure8-1.png)
 
 |    offset 系列属性     |                      作用                       |
 | :--------------------: | :---------------------------------------------: |
@@ -1262,7 +1332,7 @@ eventTarget.addEventListener("click", function (event) {});
 
 > client 翻译过来就是客户端，我们使用 client 系列的相关属性来获取元素可视区的相关信息。通过 client 系列的相关属性可以动态的得到该元素的边框大小、元素大小等。
 
-![client](images\220606_JavaScript_img/Part2/figure8-2.png)
+![client](/assets/images/220606_JavaScript_img/Part2/figure8-2.png)
 
 |    client 系列属性     |                               作用                               |
 | :--------------------: | :--------------------------------------------------------------: |
@@ -1275,7 +1345,7 @@ eventTarget.addEventListener("click", function (event) {});
 
 > scroll 翻译过来就是滚动的，我们使用 scroll 系列的相关属性可以动态的得到该元素的大小、滚动距离等。返回数值不带单位
 
-![scroll](images\220606_JavaScript_img/Part2/figure8-3.png)
+![scroll](/assets/images/220606_JavaScript_img/Part2/figure8-3.png)
 
 |    scroll 系列属性     |             作用             |
 | :--------------------: | :--------------------------: |
@@ -1327,10 +1397,12 @@ eventTarget.addEventListener("click", function (event) {});
 2. 在同一个窗口(页面)下数据可以共享
 3. 以键值对的形式存储使用
 
-- 存储数据：`sessionStorage.setItem(key, value)`
-- 获取数据：`sessionStorage.getItem(key)`
-- 删除数据：`sessionStorage.removeItem(key)`
-- 删除所有数据：`sessionStorage.clear()`
+```javascript
+sessionStorage.setItem(key, value); // 存储数据
+sessionStorage.getItem(key); // 获取数据
+sessionStorage.removeItem(key); // 删除数据
+sessionStorage.clear(); // 删除所有数据
+```
 
 #### 10.3 window.localStorage
 
@@ -1339,10 +1411,12 @@ eventTarget.addEventListener("click", function (event) {});
 3. 以键值对的形式存储使用
 4. 只能存储字符串
 
-- 存储数据：`localStorage.setItem(key, value)`
-- 获取数据：`localStorage.getItem(key)`
-- 删除数据：`localStorage.removeItem(key)`
-- 删除所有数据：`localStorage.clear()`
+```javascript
+localStorage.setItem(key, value); // 存储数据
+localStorage.getItem(key); // 获取数据
+localStorage.removeItem(key); // 删除数据
+localStorage.clear(); // 删除所有数据
+```
 
 ### 十一、移动端网页特效
 
@@ -1461,7 +1535,11 @@ eventTarget.addEventListener("click", function (event) {});
 
    - 得到当前元素索引号：`$(this).index()`
 
-5. 链式编程：`$(this).css('color','red').sibling().css('color','');`
+5. 链式编程：
+
+   ```javascript
+   $(this).css("color", "red").sibling().css("color", "");
+   ```
 
 ### 三、样式操作
 
@@ -1495,7 +1573,7 @@ eventTarget.addEventListener("click", function (event) {});
 
 1. 封装动画效果
 
-   ![封装动画](images\220606_JavaScript_img/Part3/figure4-1.png)
+   ![封装动画](/assets/images/220606_JavaScript_img/Part3/figure4-1.png)
 
 2. 显示隐藏
 
@@ -1545,8 +1623,13 @@ eventTarget.addEventListener("click", function (event) {});
    ```
 
 7. 自定义动画
-   - `animate(params,[speed],[easing],[fn]);`
-   - params: 想要更改的样式属性，以对象形式传递，必须写。属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法 borderLeft。其余参数都可以省略，如不省略则同显示隐藏
+
+   ```javascript
+   animate(params, [speed], [easing], [fn]);
+   // params: 想要更改的样式属性，以对象形式传递，必须写。
+   // 属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法 borderLeft。
+   // 其余参数都可以省略，如不省略则同显示隐藏
+   ```
 
 ### 五、属性、文本操作
 
@@ -1556,7 +1639,7 @@ eventTarget.addEventListener("click", function (event) {});
 2. 设置或获取元素自定义属性值 attr()
    - 获取属性语法：`attr("属性")`
    - 设置属性语法：`attr("属性","属性值")`
-   - 类似原生 getAttribute()/setAttribute()
+   - 类似原生 `getAttribute()`/`setAttribute()`
 3. 数据缓存 data()
    - data() 方法可以在指定的元素上存取数据，并不会修改 DOM 元素结构。一旦页面刷新，之前存放的数据都将被移除
    - 附加数据语法：`data("name","value")`
@@ -1849,18 +1932,18 @@ eventTarget.addEventListener("click", function (event) {});
 
 &emsp;`__proto__`对象原型的意义就在于为对象的查找机制提供一个方向，或者说一条路线(原型链)，但是它是一个非标准属性，因此实际开发中，不可以使用这个属性，它只是内部指向原型对象 `prototype`
 
-![__proto__](images\220606_JavaScript_img/Part4/figure3-1.png)  
+![__proto__](/assets/images/220606_JavaScript_img/Part4/figure3-1.png)  
 &emsp;实例的`__proto__`等价于该实例的构造函数的`prototype`
 
 ##### 3.2.3 constructor 构造函数
 
 &emsp;对象原型（ `__proto__`）和构造函数原型对象（`prototype`）里面都有一个 `constructor`属性，它指回构造函数本身。`constructor` 主要用于记录该对象引用于哪个构造函数，它可以让原型对象重新指向原来的构造函数。
 
-![constructor](images\220606_JavaScript_img/Part4/figure3-2.png)
+![constructor](/assets/images/220606_JavaScript_img/Part4/figure3-2.png)
 
 ##### 3.2.4 原型链
 
-![原型链](images\220606_JavaScript_img/Part4/figure3-3.png)
+![原型链](/assets/images/220606_JavaScript_img/Part4/figure3-3.png)
 
 **概念**：  
 &emsp;原型链作为实现继承的主要方法，其基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。  
@@ -1871,12 +1954,12 @@ eventTarget.addEventListener("click", function (event) {});
 &emsp;“原型链”的作用在于，当读取对象的某个属性时，JavaScript 引擎先寻找对象本身的属性，如果找不到，就到它的原型去找，如果还是找不到，就到原型的原型去找。以此类推，如果直到最顶层的 `Object.prototype` 还是找不到，则返回 `undefine`
 
 **终点**：  
-&emsp;由于 `Object` 是构造函数，原型链终点是`Object.prototype.__proto__`，而 `Object.prototype.__proto__=== null // true`，所以，原型链的终点是 `null`。原型链上的所有原型都是对象，所有的对象最终都是由 `Object` 构造的，而 `Object.prototype` 的下一级是 `Object.prototype.__proto__`。
+&emsp;由于 `Object` 是构造函数，原型链终点是 `Object.prototype.__proto__`，而 `Object.prototype.__proto__=== null // true`，所以，原型链的终点是 `null`。原型链上的所有原型都是对象，所有的对象最终都是由 `Object` 构造的，而 `Object.prototype` 的下一级是 `Object.prototype.__proto__`。
 
 ##### 3.2.5 Analyse
 
 &emsp;首先是一张历史悠久且经典的图  
-![源远流长](images\220606_JavaScript_img/Part4/figure3-4.jpg)
+![源远流长](/assets/images/220606_JavaScript_img/Part4/figure3-4.jpg)
 
 &emsp;1+1=2 的部分结束，那么：
 
@@ -1896,7 +1979,7 @@ eventTarget.addEventListener("click", function (event) {});
    // 等同于 Object.prototype.__proto__ === null
    ```
 
-   ![analyse](images\220606_JavaScript_img/Part4/figure3-5.png)
+   ![analyse](/assets/images/220606_JavaScript_img/Part4/figure3-5.png)
 
 2. 原型对象
 
@@ -1919,11 +2002,11 @@ eventTarget.addEventListener("click", function (event) {});
    // prototype属性很特殊，它还有一个隐式的constructor，指向了构造函数本身。
    ```
 
-   ![analyse](images\220606_JavaScript_img/Part4/figure3-6.png)
+   ![analyse](/assets/images/220606_JavaScript_img/Part4/figure3-6.png)
 
 3. 更直观的图
 
-   ![analyse](images\220606_JavaScript_img/Part4/figure3-7.png)
+   ![analyse](/assets/images/220606_JavaScript_img/Part4/figure3-7.png)
 
 ##### 3.2.7 补充
 
@@ -1936,7 +2019,7 @@ eventTarget.addEventListener("click", function (event) {});
    - 运算符返回一个布尔值，表示一个对象是否由某个构造函数创建
    - 原理：判断实例对象的`__proto__`和生成该实例的构造函数的`prototype`是不是引用的同一个地址
 
-   ![instanceof](images\220606_JavaScript_img/Part4/figure3-8.png)
+   ![instanceof](/assets/images/220606_JavaScript_img/Part4/figure3-8.png)
 
 #### 3.3 JavaScript 的成员查找机制(规则)
 
@@ -2060,7 +2143,7 @@ eventTarget.addEventListener("click", function (event) {});
    // 函数也属于对象
    ```
 
-   ![函数定义](images\220606_JavaScript_img/Part4/figure4-1.png)
+   ![函数定义](/assets/images/220606_JavaScript_img/Part4/figure4-1.png)
 
 &emsp;**函数的调用方式**：  
 &emsp;普通函数、对象的方法、构造函数、绑定事件函数、定时器函数、立即执行函数
