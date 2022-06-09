@@ -10,13 +10,14 @@
   right: 60px;
   bottom: 48px;
   background: $brand-color;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   opacity: 0;
   transform: translateY(10px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.33);
   font-size: 24px;
   user-select: none;
+  z-index: 1;
 
   @include media-query(1024px) {
     width: 48px;
