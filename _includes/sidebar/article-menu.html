@@ -115,6 +115,12 @@
           if (lastActive == curActive) {
             changed = false;
           }
+          // 目录列表跟随文章滚动
+          if (a.offsetTop > 570) {
+            menuContent.scrollTop = a.offsetTop - 570;
+          } else {
+            menuContent.scrollTop = 0;
+          }
           break;
         }
       }
@@ -123,17 +129,9 @@
           lastActive.classList.remove("active");
         }
         doMenuCollapse(activeIndex);
-
-        // 目录列表跟随文章滚动
-        if (a.offsetTop > 600) {
-          menuContent.scrollTop = a.offsetTop - 550;
-        } else {
-          menuContent.scrollTop = 0;
-        }
       }
       event.preventDefault();
     });
   }
   generateContent();
 </script>
-
