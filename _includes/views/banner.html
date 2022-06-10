@@ -82,10 +82,29 @@ banner_background -%}
       })();
     </script>
     {%- else -%}
-    <div id="page-banner-img"></div>
+    <div class="dynamicBanner"></div>
+    <!-- 动态banner -->
+    <!-- <div id="page-banner-img"></div> -->
+
     <!--<div style="background-image: url({{ banner | relative_url }})"></div>-->
-    <!-- <div style="background-image: url({{ banner_image }})"></div>
-        <img class="img-placeholder" src="{{ banner_image }}"> -->
+
+    <!-- 图片作为banner -->
+    <!-- <div style="background-image: url({{ banner_image }})"></div> -->
+    <img class="img-placeholder" src="{{ banner_image }}" />
+
+    <!-- 动态Banner图设置 -->
+    <script>
+      (function () {
+        var pageBannerImg = document.getElementsByClassName("dynamicBanner")[0];
+        if (document.title.split(" ")[0] != "首页") {
+          //   var pageBannerImg = document.getElementById("page-banner-img");
+          pageBannerImg.style.backgroundImage = "url({{ banner_image }})";
+        } else {
+          pageBannerImg.setAttribute("id", "page-banner-img");
+        }
+      })();
+    </script>
+
     {%- endif -%}
   </div>
   <div class="wrapper">
