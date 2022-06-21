@@ -9,8 +9,12 @@ code.hljs {
 .hljs {
   color: #abb2bf;
   background: #282c34;
-  font-family: ui-monospace, SFMono-Regular SF Mono, Menlo, Consolas,
-    Liberation Mono, monospace;
+  /* font-family: ui-monospace, SFMono-Regular SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace; */
+
+  font-family: "Source Code Pro", "DejaVu Sans Mono", "Ubuntu Mono",
+    "Anonymous Pro", "Droid Sans Mono", Menlo, Monaco, Consolas, Inconsolata,
+    Courier, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .hljs-comment,
 .hljs-quote {
